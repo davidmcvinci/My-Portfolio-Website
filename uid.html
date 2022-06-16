@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David McVinci | UI Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+         @font-face {
+            font-family: "Slish";
+            src: url(graphics/Fragille-Reguler.ttf) format("truetype");
+        }
+
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .back{
+            border-radius: 50%;
+            width: 20px;
+            padding: 10px;
+            height: 20px;
+            background-color: #fafafa;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px;
+            z-index: 99999;
+            box-shadow: 0px 0px 20px rgb(145, 145, 145);
+        }
+        .back_icon{
+            height: 20px;
+            width: 20px;
+        }
+        section{
+            height: 100vh;
+            width: 97vw;
+        }
+        .header{
+            background-color: #fff;
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid grey;
+        }
+         .header p{
+             text-align: center;
+             color: #1e1e1e;
+             font-family: 'Poppins', sans-serif;
+             letter-spacing: 3px;
+             text-transform: uppercase;
+        }
+         .header span{
+            text-transform: capitalize;
+             font-weight: semibold;
+             font-size: 25px;
+             letter-spacing: normal;
+        }
+        .info{
+            width: 100%;
+            height: 70%;
+            background-color: white;
+            display: flex;
+        }
+        .image{
+            float: inline-start;
+            width: 800px;
+        }
+        .image img{
+            width: 100%;
+        }
+        .text{
+            float: inline-end;
+            width: 700px;
+            padding-top: 60px;
+            padding-right: 20px;
+            font-family: 'Poppins',  sans-serif;
+        }
+        .text button{
+            background-color: rgb(91, 0, 175);
+            border: none;
+            border-radius: 8px;
+            padding-block: 12px;
+            padding-inline: 20px;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .text button img{
+            transform: rotate(180deg) ;
+            color: white;
+        }
+        .entire_text{
+            color: #1e1e1e;
+        }
+        .entire_text span{
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(91, 0, 175);
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href="index.html">
+        <div class="back">
+            <img src="graphics/back-caret.svg" class="back_icon">
+        </div>
+    </a>
+
+    <section>
+        <div class="header">
+           <p><span>McVinci</span><br> As a UI Designer</p>
+        </div>
+
+        <div class="info">
+            <div class="image">
+                <img src="graphics/ui_1.png">
+            </div>
+            <div class="text">
+                <p class="entire_text"> 
+                    Mobile Application<br>
+                    <span> Design and Prototyping</span>
+                   
+                    <br>
+                    <br>
+
+                    Client- Whitesol Technologies
+                    <br>
+                    Goal-  To develop a smooth mobile application design that allows users to find and complete freelancing jobs online
+                </p>
+                    
+                <button>
+                    View Full Project on Figma
+                    <img src="graphics/back-caret.svg" class="back_icon">
+                </button>
+            </div>
+           
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David McVinci | Graphic Design </title>
+
+    <style>
+    @font-face {
+        font-family: "Slish";
+        src: url(graphics/Fragille-Reguler.ttf) format("truetype");
+    }
+
+    body{
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .section{
+        background-color: #8d8282;
+        width: 100vw;
+        height: 40vh;
+        padding-top: 20px;
+        align-items: center;
+        justify-content: center; 
+    }
+    .section .name{
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 23px;
+        color: white;
+    }
+    .one{
+        font-family: Montserrat;
+        font-weight: bold;
+        color: white;
+    }
+    .section img{
+        position: absolute;
+        left: -35px;
+        top: 90px;
+        transform: scale(.8);
+        box-shadow: 0px 30px 30px rgb(228, 228, 228, overlay);
+        height: 570px;
+    }
+    .misfit{
+        display: flex;
+        justify-content: flex-end;
+        height: fit-content;
+        margin: 0px;
+    }
+    .spaced{
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal;
+        color: white;
+        letter-spacing: 3px;
+        font-size: 12px;
+        text-align: left;
+        float: right;
+        position: absolute;
+        left: 50%;
+        top: 280px;
+        color: #1e1e1e;
+    }
+    .misfit p span{
+        font-family: Recoleta;
+        font-weight: bold;
+        letter-spacing: initial;
+        font-size: 40px;
+        text-align: left;
+    }
+    .misfit .talk, .second .talk{
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: normal;
+    }
+    .button{
+        padding: 10px;
+        width: 150px;
+        height: 40px;
+        border-radius: 6px;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+        color: #fafafa;
+        background-color: #242424;
+    }
+
+    .second{
+        position: relative;
+        width: 100vw;
+        height: 70vh;
+        background: #242424;
+        margin-top: 400px;
+        padding: 0px 50px;
+    }
+    .second img{
+        transform: scale(.3);
+        margin-right: 50px;
+        position: relative;
+        left: -180px;
+        top: -500px;
+        box-shadow: 0px 30px 30px rgb(145, 145, 145);
+    }
+    .every_text{
+        position: relative;
+        top: -1500px;
+        color: #fafafa;
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal;
+        letter-spacing: 3px;
+  }
+    .every_text .brand_name{
+        font-family: "Slish";
+        font-size: 50px;
+    }
+    .every_text .explain{
+        letter-spacing: normal;
+        font-size: 14px;
+    }
+    .button-2{
+        padding: 10px;
+        width: 150px;
+        height: 40px;
+        border-radius: 6px;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+        background-color: #fafafa;
+        color: #242424;
+    }
+    .line{
+        width: 300px;
+        height: 100px;
+        border: solid 1px #000;
+        border-color: transparent transparent rgb(0, 250, 250) transparent;
+        border-radius: 0 0 240px 50%/60px;
+        position: relative;
+        top: -260px;
+        left: 20px;
+        transform: rotateX(180deg);
+    }
+    .flyers{
+        background-color: #d5fce9;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 100px;
+        padding:0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+    .flyers p{
+        font-size: 30px;
+        font-family: "Slish";
+        color: #1e1e1e;
+    }
+    .flyer-pics{
+        width: 85%;
+        height: 32vh;
+        aspect-ratio: var(--ratio);
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .flyer-pics:nth-of-type(2){
+        height: 38vh;
+    }
+    .item{
+        aspect-ratio: var(--ratio);
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 10px;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 3px;
+        box-shadow: 10px 10px 20px rgb(226, 226, 226);
+    }
+    .item img{
+        width: 100%;
+        transition: .6s all ease-in-out ;
+    }
+    .item img:hover{
+        transform: scale(1.2);
+    }
+    .back{
+        border-radius: 50%;
+        width: 20px;
+        padding: 10px;
+        height: 20px;
+        background-color: #fafafa;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px;
+        z-index: 99999;
+        box-shadow: 0px 0px 20px rgb(145, 145, 145);
+    }
+    .back_icon{
+        height: 20px;
+        width: 20px;
+    }
+        
+    </style>
+</head>
+<body>
+
+    <a href="index.html">
+        <div class="back">
+            <img src="graphics/back-caret.svg" class="back_icon">
+        </div>
+    </a>
+
+    <div class="section">
+       
+            <p class="name">
+                <span class="one">McVinci</span>
+                <br>
+                The Graphic Designer
+            </p>
+            
+            <br>
+
+            <div class="misfit">
+                <img src="graphics/Stationeries.jpg">
+
+                <p class="spaced">Brand Identity Design for <br>
+                    <span class="name-1">Billion Shades Ads</span>
+            
+                    <br>
+                    <br>
+                    
+                    <span class="talk">Brand Goal: Growing Start-ups and other upcoming brands by providing<br>
+                    branding materials and services ranging from Brand Identity Design to <br>
+                    ad materials and consultancy.</span>
+
+                    <br>
+                    <br>
+                        <button class="button">
+                            See Full Project
+                        </button>
+                </p>
+            </div>
+    </div>
+
+    <section class="second">
+        
+        <img src="graphics/digitalart.png">
+
+        <p class="every_text">
+            Logo Design for<br>
+            <span class="brand_name">Derah Vee</span>
+
+            <br>
+            <br>
+
+           <span class="explain">Logo Design Project for a nighties
+            sale brand. Lorem ipsum, dolor sit amet <br>consectetur adipisicing elit. Eveniet perspiciatis, repudiandae  at <br>amet temporibus?</span>
+
+            <br>
+            <br>
+               
+            <button class="button-2">
+                See Full Project
+            </button>
+        </p>
+        
+    </section>
+    <div class="line"></div>
+
+    <section class="flyers">
+        <P>Flyer Design Gallery</P>
+
+        <div class="flyer-pics">
+            <!--so here, I can add boxes of different aspect ratios and make thumbnails with that aspect ratio-->
+            <div class="item" style="--ratio: 2 / 1 "><img src="graphics/"></div>
+            <div class="item" style="--ratio: 5 / 2"><img src="graphics/walls.jpg"></div>
+            <div class="item" style="--ratio: 4.5 / 3.5">
+                <div><img src="graphics/rorw.jpg"></div>
+                <div><Img src="graphics/rorw.jpg"></div>
+            </div>
+            <div class="item" style="--ratio: 2.6 / .5"><img src="graphics/label.png"></div>
+            <div class="item" style="--ratio: 4.5 / 3 ">
+                <div><img src="graphics/skillznet.jpg"></div>
+                <div><img src="graphics/skillznet.jpg"></div>
+            </div>
+            <div class="item" style="--ratio: 4.5 / 2"><img src="graphics/CAMPAIGN POSTER.png"></div>
+        </div>
+
+        <div class="flyer-pics">
+            <!--so here, I can add boxes of different aspect ratios and make thumbnails with that aspect ratio-->
+            <div class="item" style="--ratio: 2.6 / .6"><img src="graphics/bg.png"></div>
+            <div class="item" style="--ratio: 4.5 / 2"><img src="graphics/bells.png"></div>
+            <div class="item" style="--ratio: 4.5 / 3 ">
+                <div><img src="graphics/1k (1).jpg"></div>
+                <div><img src="graphics/1k (1).jpg"></div>
+            </div>
+            <div class="item" style="--ratio: 5 / 2"><img src="graphics/nativity.jpg"></div>
+            <div class="item" style="--ratio: 2 / 1 "><img src="graphics/bg.png"></div>
+            <div class="item" style="--ratio: 4.5 / 3.5"><img src="graphics/"></div>
+            
+        </div>
+    </section>
+    
+</body>
+</html>
