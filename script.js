@@ -16,3 +16,15 @@ function reveal(){
         }
     }
 }
+
+const open = document.getElementById('open');
+const modal_container = document.getElementById('modal_container');
+const closed = document.getElementById('closed');
+
+open.addEventListener('click', () => {
+    modal_container.classList.add('show');
+});
+
+closed.addEventListener('click', () => {
+    modal_container.classList.remove('show');
+});
