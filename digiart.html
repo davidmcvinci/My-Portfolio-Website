@@ -7,15 +7,49 @@
     <title>David McVinci | Digital Art</title>
     <link rel="icon" href="graphics/uid_favicon">
     <style>
-
-        body{
-            margin: 0px;
-            padding: 0px;
-            background-color: #fefefe;
+         @font-face {
+        font-family: "Slish";
+        src: url(graphics/Fragille-Reguler.ttf) format("truetype");
+        }
+        .wholebody{
+            width: 100vw;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        .wholebody:before{
+            background-image: url(graphics/museum.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: .9;
+            background-blend-mode: multiply;
+        }
+        h3{
+            font-family: 'Slish';
+            font-size: 40px;
+            color: #5c5c5c;
+        }
+        .back{
+            border-radius: 50%;
+            width: 20px;
+            padding: 10px;
+            height: 20px;
+            background-color: #fafafa;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            display: flex;
+            align-items: center;
             justify-content: center;
+            margin: 40px;
+            z-index: 99999;
+            box-shadow: 0px 10px 20px rgba(145, 145, 145, 30%);
+        }
+        .back_icon{
+            height: 20px;
+            width: 20px;
         }
         .wrapper{
             height: 60vh;
@@ -24,43 +58,61 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /*background-color: #1e1e1e;*/
-        }
-        .wrapper:first-of-type{
-            margin-bottom: 20px;
         }
         .frame{
-            margin-right: 20px;
+            aspect-ratio: var(--ratio);
+            margin-right: 15px;
             height: 75%;
-            width: 300px;
             background-color: white;
-            background-image: url(graphics/digitalart.jpg);
             background-position: center;
             background-size: cover;
-            box-shadow: 0px 10px 15px  rgba(0,0,0, 10%);
-            border-radius: 8px;
+            box-shadow: 0px 7px 7px  rgba(0,0,0, 10%);
+            border-radius: 0px;
             overflow: hidden;
-            transition: all .3s;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease-in-out;
         }
         .frame:hover{
             transform: scale(1.1);
+            box-shadow: 0px 10px 15px  rgba(0,0,0, 13%);
+        }
+        .frame img{
+            position: absolute;
+            height: 133%;
+            transition: all .3s ease-in-out;
+        }
+        .frame img:hover{
+            transform: scale(.8);
+            transition: all .3s ease-in-out;
         }
     </style>
 </head>
 <body>
-    <h3>The McVinci Gallery</h3>
-    <div class="wrapper">
-        <div class="frame"></div>
-        <div class="frame"></div>
-        <div class="frame"></div>
-        <div class="frame"></div>
-    </div>
+    <div class="wholebody">
+        <h3>The McVinci Gallery</h3>
 
-    <div class="wrapper">
-        <div class="frame"></div>
-        <div class="frame"></div>
-        <div class="frame"></div>
-        <div class="frame"></div>
+        <a href="index.html#digi_art">
+            <div class="back">
+                <img src="graphics/back-caret.svg" class="back_icon">
+            </div>
+        </a>
+
+        <div class="wrapper">
+            <div class="frame" style="--ratio: 2 / 1 "><img src="graphics/digitalart.jpg"></div>
+            <div class="frame" style="--ratio: 5 / 2"><img src="graphics/digitalart.jpg"></div>
+            <div class="frame"  style="--ratio: 2 / .6"><img src="graphics/digitalart.jpg"></div>
+            <div class="frame" style="--ratio: 2.6 / .5"><img src="graphics/digitalart.jpg"></div>
+        </div>
+
+        <div class="wrapper">
+            <div class="frame"  style="--ratio: 2.6 / .5"  ><img src="graphics/digitalart.jpg"></div>
+            <div class="frame"  style="--ratio: 1 / .5"><img src="graphics/digitalart.jpg"></div>
+            <div class="frame" style="--ratio: 3 / 1 "><img src="graphics/digitalart.jpg"></div>
+            <div class="frame"  style="--ratio: 5 / 2"><img src="graphics/digitalart.jpg"></div>
+        </div>
     </div>
 </body>
 </html>
