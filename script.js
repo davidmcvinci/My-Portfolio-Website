@@ -1,3 +1,12 @@
+var loader= document.getElementsById('loader');
+
+window.addEventListener('load', function() {
+    loader.style.display = 'none';
+})
+
+
+
+
 window.addEventListener('scroll', reveal);
 
 function reveal(){
