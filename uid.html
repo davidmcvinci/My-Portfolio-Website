@@ -15,9 +15,22 @@
             src: url(graphics/Fragille-Reguler.ttf) format("truetype");
         }
 
+        @media screen and (max-width: 500px) {
+            section{
+                flex-direction: column;
+            }
+            
+        }
+
         body{
+           overflow-x: hidden;
             padding: 0px;
             margin: 0px;
+            width: 100vw;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+           justify-content: center;
         }
         .back{
             border-radius: 50%;
@@ -37,7 +50,9 @@
             height: 20px;
             width: 20px;
         }
-        section{
+        .first{
+            display: flex;
+            flex-direction: column;
             height: 100vh;
             width: 97vw;
         }
@@ -57,7 +72,7 @@
              letter-spacing: 3px;
              text-transform: uppercase;
         }
-         .header span{
+        .header span{
             text-transform: capitalize;
              font-weight: semibold;
              font-size: 25px;
@@ -83,7 +98,7 @@
             padding-right: 20px;
             font-family: 'Poppins',  sans-serif;
         }
-        .text button{
+         button{
             background-color: rgb(91, 0, 175);
             border: none;
             border-radius: 8px;
@@ -94,9 +109,11 @@
             display: flex;
             align-items: center;
         }
-        .text button img{
+        button svg{
+            height: 20px;
             transform: rotate(180deg) ;
-            color: white;
+            fill: white;
+            margin-left: 10px;
         }
         .entire_text{
             color: #1e1e1e;
@@ -106,25 +123,89 @@
             font-weight: 600;
             color: rgb(91, 0, 175);
         }
+        section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            padding-inline: 30px;
+            height: 100vh;                
+        }
+        .details{
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            width: 38%;
+            height: 300px;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .details span{
+            text-transform: capitalize;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: normal;
+        }
+        section .img{
+            margin-right: 20px;
+            position: relative;
+            width: 58%;
+            height: 500px;
+        }
+        .img img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .img-3{
+            height: 500px;
+            width: 50%;
+            
+            position: relative;
+            left: -60px;
+        }
+        .img-3 img{
+            width: 100%;
+            height: auto;
+        }
+        .third{
+            height: 100%; 
+        }
+        .details-3{
+            width: 40%;
+            font-family: 'Poppins',  sans-serif;
+            font-size: 17px;
+            margin-right: 30px;
+        }
+        .details-3 span{
+            text-transform: capitalize;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: normal;
 
+        }
     </style>
 </head>
 
 <body>
-    <a href="index.html">
+    <a href="index.html#ui">
         <div class="back">
             <img src="graphics/back-caret.svg" class="back_icon">
         </div>
     </a>
 
-    <section>
+    <section class="first">
         <div class="header">
            <p><span>McVinci</span><br> As a UI Designer</p>
         </div>
 
         <div class="info">
             <div class="image">
-                <img src="graphics/ui_1.png">
+                <img src="graphics/ui_design/ui_1.png">
             </div>
             <div class="text">
                 <p class="entire_text"> 
@@ -141,11 +222,48 @@
                     
                 <button>
                     View Full Project on Figma
-                    <img src="graphics/back-caret.svg" class="back_icon">
+                    <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                        <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/>
+                    </svg>
                 </button>
             </div>
            
         </div>
+    </section>
+
+    <section>
+        <div class="details">
+            <p>Imaginary<br>
+                <span>Social Media Profile Design</span>
+                <br>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ipsam facilis unde nobis quasi blanditiis neque corrupti earum assumenda error vitae ullam voluptatibus minima, placeat quas doloribus pariatur rem.
+            </p>
+        </div>
+        <div class="img">
+            <img src="graphics/ui_design/HANDBOOK PROFILE UI.jpg">
+        </div>
+    </section>
+
+    <section>
+        <div class="img-3">
+            <img class= "third" src="graphics/ui_design/School DBMS Professor Home.jpg">
+        </div>
+
+        <div class="details-3">
+            <p>Design & Prototyping of <br>
+                <span>School Database Management System</span>
+                <br>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ipsam facilis unde nobis quasi blanditiis neque corrupti earum assumenda error vitae ullam voluptatibus minima, placeat quas doloribus pariatur rem.
+            </p>
+
+            <button>
+                View Full Project on Figma
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
+            </button>
+        </div>
+        
     </section>
 </body>
 </html>

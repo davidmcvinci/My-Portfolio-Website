@@ -5,18 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David McVinci | Digital Art</title>
-    <link rel="icon" href="graphics/uid_favicon">
+    <link rel="icon" href="graphics/digitalart_favicon">
     <style>
          @font-face {
         font-family: "Slish";
         src: url(graphics/Fragille-Reguler.ttf) format("truetype");
         }
+        body{
+            margin: 0;
+            padding: 0px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
         .wholebody{
             width: 100vw;
-            height: 100vh;
+            height: fit-content;
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: #eff8ee;
         }
         .wholebody:before{
             background-image: url(graphics/museum.jpg);
@@ -76,8 +83,10 @@
             transition: all .3s ease-in-out;
         }
         .frame:hover{
-            transform: scale(1.1);
-            box-shadow: 0px 10px 15px  rgba(0,0,0, 13%);
+            transform: scale(1.2);
+            box-shadow: 0px 10px 15px  rgba(0,0,0, 20%);
+            background-color: transparent;
+            z-index: 1;
         }
         .frame img{
             position: absolute;
@@ -101,17 +110,17 @@
         </a>
 
         <div class="wrapper">
-            <div class="frame" style="--ratio: 2 / 1 "><img src="graphics/digitalart.jpg"></div>
-            <div class="frame" style="--ratio: 5 / 2"><img src="graphics/digitalart.jpg"></div>
-            <div class="frame"  style="--ratio: 2 / .6"><img src="graphics/digitalart.jpg"></div>
-            <div class="frame" style="--ratio: 2.6 / .5"><img src="graphics/digitalart.jpg"></div>
+            <div class="frame" style="--ratio: 2 / 1 "><img src="graphics/digital_art/khaleesi.jpg"></div>
+            <div class="frame" style="--ratio: 5 / 2"><img src="graphics/digital_art/Eyes.png"></div>
+            <div class="frame"  style="--ratio: 2 / .6"><img src="graphics/digital_art/scene sketch.png"></div>
+            <div class="frame" style="--ratio: 2.6 / .5"><img src="graphics/digital_art/AbiBless Mockup 1.jpg"></div>
         </div>
 
         <div class="wrapper">
-            <div class="frame"  style="--ratio: 2.6 / .5"  ><img src="graphics/digitalart.jpg"></div>
-            <div class="frame"  style="--ratio: 1 / .5"><img src="graphics/digitalart.jpg"></div>
-            <div class="frame" style="--ratio: 3 / 1 "><img src="graphics/digitalart.jpg"></div>
-            <div class="frame"  style="--ratio: 5 / 2"><img src="graphics/digitalart.jpg"></div>
+            <div class="frame"  style="--ratio: 1.1 / .5"  ><img src="graphics/digital_art/perspective.JPG"></div>
+            <div class="frame"  style="--ratio: 1 / .5"><img src="graphics/digital_art/Digital Traditional Painting.png"></div>
+            <div class="frame" style="--ratio: 2 / 1 "><img src="graphics/digital_art/Lips.png"></div>
+            <div class="frame"  style="--ratio: 4.8/ 2"><img src="graphics/digital_art/Beautiful Mind 2.png"></div>
         </div>
     </div>
 </body>

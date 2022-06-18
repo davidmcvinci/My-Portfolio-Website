@@ -28,3 +28,11 @@ open.addEventListener('click', () => {
 closed.addEventListener('click', () => {
     modal_container.classList.remove('show');
 });
+
+
+const pen = document.getElementById('pen');
+const title = document.getElementById('title');
+
+pen.addEventListener('click', () => {
+    title.classList.add('on');
+});
