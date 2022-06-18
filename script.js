@@ -1,12 +1,3 @@
-var loader= document.getElementsById('loader');
-
-window.addEventListener('load', function() {
-    loader.style.display = 'none';
-})
-
-
-
-
 window.addEventListener('scroll', reveal);
 
 function reveal(){
@@ -47,4 +38,16 @@ pen.addEventListener('mouseover', () => {
 });
 pen.addEventListener('mouseout', () => {
     title.classList.remove('on');
+});
+
+
+
+/*var loader= document.getElementsById('loader');
+
+window.addEventListener("load", function() {
+    loader.style.display = 'none';
+});*/
+
+$(window).on("load", function(){
+    $(".loader").fadeOut("slow");
 });
