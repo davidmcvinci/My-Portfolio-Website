@@ -33,6 +33,9 @@ closed.addEventListener('click', () => {
 const pen = document.getElementById('pen');
 const title = document.getElementById('title');
 
-pen.addEventListener('click', () => {
+pen.addEventListener('mouseover', () => {
     title.classList.add('on');
+});
+pen.addEventListener('mouseout', () => {
+    title.classList.remove('on');
 });
