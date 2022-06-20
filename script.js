@@ -94,6 +94,6 @@ window.addEventListener('load', () => {
         loader.style.display = 'none';
     });
 
-/*$(window).on("load", function(){
+/*$(window).on("load", function() =>{
     $(".loader").fadeOut("slow");
 });*/
