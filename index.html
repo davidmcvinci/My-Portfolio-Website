@@ -231,14 +231,16 @@
                     <div class="modal">
                         <svg class="backsvg" id="closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
                         <h2>How do you feel about my work?</h2>
-                        <form method="post" action="reviews.php">
+                        <form class="gform pure-form pure-form-stacked" method="POST" data-email="mcvinci19@gmail.com"
+                        action="https://script.google.com/macros/s/AKfycbx5zCEHlII2uExeGvucLivvtPEuDck0ElDX6UE58JlpHAbAq8p-ChjTW-g1DDAS7I9OYA/exec">
                             <label>
                                 Give commendations and suggest services...
                             </label>
                             <input name="name" placeholder="What`s your name?" required>
                             <input name="position" placeholder="What do you do?" required>
-                            <textarea Placeholder="Your Review" style="resize: vertical; padding: 5px 10px;" maxlength="450"></textarea>
-                            <button id="closed" type="submit">
+                            <textarea name="review" Placeholder="Your Review" style="resize: none; padding: 5px 10px;" maxlength="450"></textarea>
+                            <input name="contacts" placeholder="Your Preferred Social Media " required>
+                            <button id="closed" type="submit" onclick="thanks()">
                                 Post Review
                             </button>
                         </form>
@@ -261,6 +263,126 @@
         </div>
 
         <script type="text/javascript" src="script.js"></script>
+
+        <script data-cfasync="false" type="text/javascript">
+    
+            (function() {
+           function validEmail(email) {
+             var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+             return re.test(email);
+           }
+         
+           function validateHuman(honeypot) {
+             if (honeypot) {
+               console.log("Robot Detected!");
+               return true;
+             } else {
+               console.log("Welcome Human!");
+             }
+           }
+           function getFormData(form) {
+             var elements = form.elements;
+         
+             var fields = Object.keys(elements).filter(function(k) {
+                   return (elements[k].name !== "honeypot");
+             }).map(function(k) {
+               if(elements[k].name !== undefined) {
+                 return elements[k].name;
+               }else if(elements[k].length > 0){
+                 return elements[k].item(0).name;
+               }
+             }).filter(function(item, pos, self) {
+               return self.indexOf(item) == pos && item;
+             });
+         
+             var formData = {};
+             fields.forEach(function(name){
+               var element = elements[name];
+               formData[name] = element.value;
+               if (element.length) {
+                 var data = [];
+                 for (var i = 0; i < element.length; i++) {
+                   var item = element.item(i);
+                   if (item.checked || item.selected) {
+                     data.push(item.value);
+                   }
+                 }
+                 formData[name] = data.join(', ');
+               }
+             });
+         
+             // add form-specific values into the data
+             formData.formDataNameOrder = JSON.stringify(fields);
+             formData.formGoogleSheetName = form.dataset.sheet || "Sheet1"; // default sheet name
+             formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+         
+             console.log(formData);
+             return formData;
+           }
+         
+           function handleFormSubmit(event) {  
+             event.preventDefault();           
+             var form = event.target;
+             var data = getFormData(form);         
+             if( data.email && !validEmail(data.email) ) {   
+               var invalidEmail = form.querySelector(".email-invalid");
+               if (invalidEmail) {
+                 invalidEmail.style.display = "block";
+                 return false;
+               }
+             } else {
+               disableAllButtons(form);
+               var url = form.action;
+               var xhr = new XMLHttpRequest();
+               xhr.open('POST', url);
+               xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+               xhr.onreadystatechange = function() {
+                   console.log(xhr.status, xhr.statusText);
+                   console.log(xhr.responseText);
+                   var formElements = form.querySelector(".form-elements")
+                   if (formElements) {
+                     formElements.style.display = "none"; // hide form
+                   }
+                   var thankYouMessage = form.querySelector(".thankyou_message");
+                   if (thankYouMessage) {
+                     thankYouMessage.style.display = "block";
+                   }
+                   return;
+               };
+               var encoded = Object.keys(data).map(function(k) {
+                   return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+               }).join('&');
+               xhr.send(encoded);
+             }
+           }
+           
+           function loaded() {
+             console.log("Contact form submission handler loaded successfully.");
+             var forms = document.querySelectorAll("form.gform");
+             for (var i = 0; i < forms.length; i++) {
+               forms[i].addEventListener("submit", handleFormSubmit, false);
+             }
+           };
+           document.addEventListener("DOMContentLoaded", loaded, false);
+         
+           function disableAllButtons(form) {
+             var buttons = form.querySelectorAll("button");
+             for (var i = 0; i < buttons.length; i++) {
+               buttons[i].disabled = true;
+             }
+           }
+         })();
+         
+         
+        </script>
+      
+        <script>
+            function thanks(){
+                
+            }
+        </script>
+        <!--I Just have to display the thank you message then the javascript is done running-->
+
     </body>
 
 </html>
