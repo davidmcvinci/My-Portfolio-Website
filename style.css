@@ -392,7 +392,6 @@ li{
     transition: all .1s ease-in-out;
 }
 .modal_container.show{
-    backdrop-filter: unset;
     opacity: 1;
     pointer-events: auto;
     z-index: 11;
@@ -412,7 +411,6 @@ li{
     border-radius: 7px;
     padding-block: 25px;
     padding-inline: 15px;
-    
 }
 .modal form{
     display: flex;
@@ -586,6 +584,9 @@ li{
     height: 20px;
     margin-right: 20px;
 }
+
+
+
 
 
 

@@ -32,13 +32,13 @@ closed.addEventListener('click', () => {
 });
 
 
-/*to close thank you message after posting review
+//to close thank you message after posting review
 var backicon = getElementById('closethanks');
 var thanksmodal = getElementByClassName('thankyou_message');
 
 backicon.addEventListener('click', () => {
     thanksmodal.classList.add('close');
-});*/
+});
 
 
 //for the titles of each icon on the nav...
