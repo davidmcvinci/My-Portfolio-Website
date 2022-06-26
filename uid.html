@@ -9,72 +9,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <style>
-         @font-face {
-            font-family: "Slish";
-            src: url(graphics/Fragille-Reguler.ttf) format("truetype");
-        }
-
-        @media screen and (max-width: 500px) {
-            section{
-                flex-direction: column;
-            }
-            
-        }
-        a{
-            text-decoration: none;
+    <style> 
+        @font-face {
+        font-family: "Slish";
+        src: url(graphics/Fragille-Reguler.ttf) format("truetype");
         }
         body{
-           overflow-x: hidden;
-            padding: 0px;
             margin: 0px;
-            width: 100vw;
-            height: fit-content;
-            display: flex;
-            flex-direction: column;
-           justify-content: center;
-           align-items: center;
+            padding: 0px;
         }
         .back{
-            border-radius: 50%;
-            width: 20px;
+            width: 3vmin;
+            height: 3vmin;
+            border-radius: 3vmin;
             padding: 10px;
-            height: 20px;
-            background-color: #fafafa;
-            position: fixed;
-            top: 0px;
-            left: 0px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 40px;
-            z-index: 9999;
-            box-shadow: 0px 0px 20px rgb(145, 145, 145);
+            margin: 5vmin;
+            position: fixed;
+            background-color: white;
+            box-shadow: 0px 0px 20px rgb(184, 184, 184);
+            z-index: 1;
         }
         .back_icon{
-            height: 20px;
-            width: 20px;
-        }
-        .first{
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            width: 97vw;
+            transform: scale(.7);
         }
         .header{
             background-image: url(graphics/ui-2.jpeg);
             background-size: cover;
             width: 100vw;
-            height: 30%;
-            position: relative;
+            height: 20vmin;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-bottom: 1px solid grey;
         }
         .header:before{
             width: 100vw;
-            height: 100%;
+            height: 20vmin;
             position: absolute; 
             content:'';
             background:  linear-gradient(black, rgb(7, 1, 59));
@@ -82,241 +54,191 @@
             background-blend-mode: overlay;
             transition: .4s ease-in;
         }
-         .header p{
-             text-align: center;
-             color: white;
-             font-family: 'Poppins', sans-serif;
-             letter-spacing: 3px;
-             text-transform: uppercase;
-             z-index: 999999;
+        .header p{
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            z-index: 2;
+            letter-spacing: 2px;
         }
         .header span{
-            text-transform: capitalize;
-             font-weight: 600;
-             font-size: 25px;
-             letter-spacing: normal;
-        }
-        .info{
-            width: 100%;
-            height: 70%;
-            background-color: white;
-            display: flex;
-        }
-        .image{
-            float: inline-start;
-            width: 800px;
-        }
-        .imagefb{
-            float: inline-start;
-            width: 800px;
-            transform: scale(.26); 
-            position: relative;
-            left:-80px;
-            
-        }
-        .image img{
-            width: 100%;
-        }
-        .text{
-            float: inline-end;
-            width: 700px;
-            padding-top: 60px;
-            padding-right: 20px;
-            font-family: 'Poppins',  sans-serif;
-        }
-         button{
-            background-color: rgb(91, 0, 175);
-            border: none;
-            border-radius: 8px;
-            padding-block: 12px;
-            padding-inline: 20px;
-            color: white;
+            letter-spacing: 0px;
+            font-size: 1.6em;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-        }
-        .last{
-            position: relative;
-            left: -146px;
-        }
-        button svg{
-            height: 20px;
-            transform: rotate(180deg) ;
-            fill: white;
-            margin-left: 10px;
-        }
-        .entire_text{
-            color: #1e1e1e;
-        }
-        .entire_text span{
-            font-size: 30px;
-            font-weight: 600;
-            color: rgb(91, 0, 175);
         }
         section{
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 100vw;
-            padding-inline: 30px;
-            height: 100vh;                
+            height: 100vh;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
-        .details{
+        @media screen and (max-width: 700px) {
+            section{
+                flex-direction: column;
+                height: 100vh;
+            }
+        }
+        .text_div{
             font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            width: 38%;
-            height: 300px;
-            float: left;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: left;
-            margin-left: 40px;
-            margin-bottom: 150px;
-        }
-        .details span{
-            text-transform: capitalize;
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: normal;
-        }
-        section .img{
-            margin-right: 20px;
-            position: relative;
-            width: 55%;
-            height: 500px;
-        }
-        .img img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-        .img-3{
-            height: 500px;
-            width: 50%;
-            position: relative;
-            left: -60px;
-        }
-        .img-3 img{
-            width: 100%;
-            height: auto;
-        }
-        .third{
-            height: 100%; 
-        }
-        .details-3{
+            justify-content: center;
+            padding-right: 30px;
+            padding-left: 5vmin;
+            height: 100%;
             width: 40%;
-            font-family: 'Poppins',  sans-serif;
-            font-size: 17px;
-            margin-right: 30px;
+            min-width: 400px;
         }
-        .details-3 span{
-            text-transform: capitalize;
-            font-size: 28px;
+        @media screen and (max-width: 700px) {
+            .text_div{
+                padding-block: 20px;
+                height: fit-content;
+            }
+        }
+        .text_div span{
+            font-size: 2.3em;
+        }
+        .text_div button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(91, 0, 175);
+            border: none;
+            border-radius: 13px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            letter-spacing: normal;
-
+            padding-inline: 20px;
+            width: fit-content;
+        }
+        .text_div svg{
+            fill: white;
+            height: 20px;
+            transform: rotate(180deg) ;
+            margin-left: 10px;
+        }
+        .image_div{
+            display: flex;
+            justify-content: center;
+            height: 80%;
+            width: 60%;
+            min-width: 400px;
+        }
+        @media screen and (max-width: 700px) {
+            .image_div{
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+        .image_div img{
+            height: 100%;
+        }
+        @media screen and (max-width: 700px){
+            .image_div img{
+                width: 100%;
+                height: auto;
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <a href="index.html#ui">
+    <a href="index.html#gdp">
         <div class="back">
             <img src="graphics/back-caret.svg" class="back_icon">
         </div>
     </a>
 
-    <section class="first">
-        <div class="header">
-           <p><span>McVinci</span><br> As a UI Designer</p>
+    <div class="header">
+        <p><span>McVinci</span><br> As a User Interface Designer</p>
+    </div>
+
+    <section>
+        <div class="text_div">
+            <p>Re-Design & Prototyping of
+            <br>
+            <span>Facebook`s UI</span>
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, ea adipisci sed eos eaque xercitationem eligendi aut neque qui velit similique deleniti id maxime, voluptas nemo officiis nam rem.
+            </p>
+            <a href="https://www.figma.com/proto/ryliaAuZxzpwe88a6d1LvE/EasyJob?page-id=0%3A1&node-id=21%3A188&viewport=309%2C149%2C0.15&scaling=scale-down&starting-point-node-id=1%3A13">
+                <button>
+                <p>View Full Project on Figma</p>
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
+                </button>
+            </a>
         </div>
+        <div class="image_div">
+            <img src="graphics/ui_design/Facebook UI Redesign.png">
+        </div>
+    </section>
 
-        <div class="info">
-            <div class="image">
-                <img src="graphics/ui_design/ui_1.png">
-            </div>
-            <div class="text">
-                <p class="entire_text"> 
-                    Design and Prototyping of<br>
-                    <span> EasyJob Mobile Application </span>
-                   
-                    <br>
-                    <br>
-
-                    Client- Whitesol Technologies
-                    <br>
-                    Goal-  To develop a smooth mobile application design that allows users to find and complete freelancing jobs online
-                </p>
-                    
-                <a href="https://www.figma.com/proto/ryliaAuZxzpwe88a6d1LvE/EasyJob?page-id=0%3A1&node-id=21%3A188&viewport=309%2C149%2C0.15&scaling=scale-down&starting-point-node-id=1%3A13">
-                    <button>
-                    View Full Project on Figma
-                    <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                        <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/>
+    <section>
+        <div class="image_div">
+            <img src="graphics/ui_design/School DBMS Professor Home.jpg">
+        </div>
+        <div class="text_div">
+            <p>Design of
+            <br>
+            <span>School Database Management System</span>
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, ea adipisci sed eos eaque xercitationem eligendi aut neque qui velit similique deleniti id maxime, voluptas nemo officiis nam rem.
+            </p>
+           <a href="">
+                <button>
+                    <p>View Full Project</p>
+                    <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/>
                     </svg>
                 </button>
-                </a>
-            </div>
-           
+            </a>
         </div>
     </section>
 
     <section>
-        <div class="details">
-            <p>Imaginary<br>
-                <span>Social Media Profile Design</span>
-                <br>
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ipsam facilis unde nobis quasi blanditiis neque corrupti earum assumenda error vitae ullam voluptatibus minima, placeat quas doloribus pariatur rem.
+        <div class="text_div">
+            <p>Re-Design & Prototyping of
+            <br>
+            <span>EasyJob Mobile Application</span>
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, ea adipisci sed eos eaque xercitationem eligendi aut neque qui velit similique deleniti id maxime, voluptas nemo officiis nam rem.
             </p>
+            <a href="https://www.figma.com/proto/ryliaAuZxzpwe88a6d1LvE/EasyJob?page-id=0%3A1&node-id=21%3A188&viewport=309%2C149%2C0.15&scaling=scale-down&starting-point-node-id=1%3A13">
+                <button>
+                <p>View Full Project on Figma</p>
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
+                </button>
+            </a>
         </div>
-        <div class="img">
+        <div class="image_div">
+            <img src="graphics/ui_design/ui_1.png">
+        </div>
+    </section>
+
+    <section>
+        <div class="image_div">
             <img src="graphics/ui_design/HANDBOOK_PROFILE_UI.png">
         </div>
-    </section>
-
-    <section>
-        <div class="img-3">
-            <img class= "third" src="graphics/ui_design/School DBMS Professor Home.jpg">
-        </div>
-
-        <div class="details-3">
-            <p>Design & Prototyping of <br>
-                <span>School Database Management System</span>
-                <br>
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ipsam facilis unde nobis quasi blanditiis neque corrupti earum assumenda error vitae ullam voluptatibus minima, placeat quas doloribus pariatur rem.
-            </p>
-
-            <button>
-                View Full Project on Figma
-                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
-            </button>
-        </div>
-        
-    </section>
-
-    <section>
-        <div class="details">
-            <p>Imaginary<br>
-                <span>Social Media Profile Design</span>
-                <br>
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto ipsam facilis unde nobis quasi blanditiis neque corrupti earum assumenda error vitae ullam voluptatibus minima, placeat quas doloribus pariatur rem.
-            </p>
+        <div class="text_div">
+            <p>Design of
             <br>
-            
-            <button class="last">
-                View Full Project on Figma
-                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/>
-                </svg>
-            </button>
-        </div>
-        <div class="imagefb">
-            <img src="graphics/ui_design/Facebook UI Redesign.png">
+            <span>Social Media Profile Page</span>
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, ea adipisci sed eos eaque xercitationem eligendi aut neque qui velit similique deleniti id maxime, voluptas nemo officiis nam rem.
+            </p>
+           <a href="">
+                <button>
+                    <p>View Full Project</p>
+                    <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/>
+                    </svg>
+                </button>
+            </a>
         </div>
     </section>
     

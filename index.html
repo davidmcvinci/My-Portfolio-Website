@@ -228,7 +228,7 @@
                 </div>
 
                <div class="modal_container" id="modal_container">
-                    <div class="modal">
+                    <div class="modal" id="modal">
                         <svg class="backsvg" id="closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
                         <h2>How do you feel about my work?</h2>
                         <form class="gform pure-form pure-form-stacked" method="POST" data-email="mcvinci19@gmail.com"
@@ -243,7 +243,14 @@
                             <button id="closed" type="submit" onclick="thanks()">
                                 Post Review
                             </button>
+
                         </form>
+                    </div>
+
+                    <div class="thankyou_message">    
+                        <svg class="backsvgforthanks" id="closethanks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+                        <h1 style="font-family: 'Slish'; font-size: 2em; color: #1e1e1e; background-color:white;">Thank You for reaching out </h1>
+                        <p style="text-align: center; font-family: 'Poppins', sans-serif; Color: #1e1e1e; background-color:white;">Your review has been received and <br> will be processed
                     </div>
                 </div>
             </a>
@@ -376,12 +383,13 @@
          
         </script>
       
-        <script>
-            function thanks(){
-                
+        <!--<script>
+            function thanks{
+                var form = getElementByClassName('.gform pure-form pure-form-stacked');
+                form.style.display = 'none';
             }
-        </script>
-        <!--I Just have to display the thank you message then the javascript is done running-->
+        </script>-->
+        
 
     </body>
 

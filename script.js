@@ -31,6 +31,16 @@ closed.addEventListener('click', () => {
     modal_container.classList.remove('show');
 });
 
+
+/*to close thank you message after posting review
+var backicon = getElementById('closethanks');
+var thanksmodal = getElementByClassName('thankyou_message');
+
+backicon.addEventListener('click', () => {
+    thanksmodal.classList.add('close');
+});*/
+
+
 //for the titles of each icon on the nav...
 //gdp
 const pen = document.getElementById('pen');
@@ -86,9 +96,11 @@ const contact_title = document.getElementById('title-6');
 
 
 
+    
+
 
 //for loader screen...
-var loader= document.getElementsById('loader');
+var loader= document.getElementById('loader');
 
 window.addEventListener('load', () => {
         loader.style.display = 'none';

@@ -9,205 +9,185 @@
 
     <style>
     @font-face {
-        font-family: "Slish";
-        src: url(graphics/Fragille-Reguler.ttf) format("truetype");
+    font-family: "Slish";
+    src: url(graphics/Fragille-Reguler.ttf) format("truetype");
     }
-
     body{
         margin: 0px;
         padding: 0px;
-        display: block;
-        overflow-x: hidden;
-        overflow-y: scroll;
-    }
-    .section{
-        background-color: #8d8282;
-        width: 100vw;
-        height: 40vh;
-        padding-top: 20px;
-        align-items: center;
-        justify-content: center; 
-    }
-    .section .name{
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 23px;
-        color: white;
-    }
-    .one{
-        font-family: Montserrat;
-        font-weight: bold;
-        color: white;
-    }
-    .section img{
-        position: absolute;
-        left: -35px;
-        top: 90px;
-        transform: scale(.8);
-        box-shadow: 0px 30px 30px rgb(228, 228, 228, overlay);
-        height: 570px;
-    }
-    .misfit{
-        display: flex;
-        justify-content: flex-end;
-        height: fit-content;
-        margin: 0px;
-    }
-    .spaced{
-        font-family: 'Poppins', sans-serif;
-        font-weight: normal;
-        color: white;
-        letter-spacing: 3px;
-        font-size: 12px;
-        text-align: left;
-        float: right;
-        position: absolute;
-        left: 50%;
-        top: 280px;
-        color: #1e1e1e;
-    }
-    .misfit p span{
-        font-family: Recoleta;
-        font-weight: bold;
-        letter-spacing: initial;
-        font-size: 40px;
-        text-align: left;
-    }
-    .misfit .talk, .second .talk{
-        font-family: 'Poppins', sans-serif;
-        font-weight: normal;
-        font-size: 14px;
-        letter-spacing: normal;
-    }
-    .button{
-        padding: 10px;
-        width: 150px;
-        height: 40px;
-        border-radius: 6px;
-        border: none;
-        font-family: 'Poppins', sans-serif;
-        color: #fafafa;
-        background-color: #242424;
-    }
-
-    .second{
-        position: relative;
-        width: 100vw;
-        height: 70vh;
-        background: #242424;
-        margin-top: 400px;
-        padding: 0px 50px;
-    }
-    .second img{
-        transform: scale(.3);
-        margin-right: 50px;
-        position: relative;
-        left: -180px;
-        top: -500px;
-        box-shadow: 0px 30px 30px rgb(145, 145, 145);
-    }
-    .every_text{
-        position: relative;
-        top: -1500px;
-        color: #fafafa;
-        font-family: 'Poppins', sans-serif;
-        font-weight: normal;
-        letter-spacing: 3px;
-  }
-    .every_text .brand_name{
-        font-family: "Slish";
-        font-size: 50px;
-    }
-    .every_text .explain{
-        letter-spacing: normal;
-        font-size: 14px;
-    }
-    .button-2{
-        padding: 10px;
-        width: 150px;
-        height: 40px;
-        border-radius: 6px;
-        border: none;
-        font-family: 'Poppins', sans-serif;
-        background-color: #fafafa;
-        color: #242424;
-    }
-    .line{
-        width: 300px;
-        height: 100px;
-        border: solid 1px #000;
-        border-color: transparent transparent rgb(0, 250, 250) transparent;
-        border-radius: 0 0 240px 50%/60px;
-        position: relative;
-        top: -260px;
-        left: 20px;
-        transform: rotateX(180deg);
-    }
-    .flyers{
-        background-color: #d5fce9;
-        width: 100vw;
-        height: 100vh;
-        margin-top: 100px;
-        padding:0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0px;
-    }
-    .flyers p{
-        font-size: 30px;
-        font-family: "Slish";
-        color: #1e1e1e;
-    }
-    .flyer-pics{
-        
-        width: 85%;
-        height: 32vh;
-        aspect-ratio: var(--ratio);
-        display: flex;
-        margin-bottom: 20px;
-    }
-    .flyer-pics:nth-of-type(2){
-        height: 38vh;
-    }
-    .item{
-        aspect-ratio: var(--ratio);
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-right: 10px;
-        background-color: white;
-        overflow: hidden;
-        border-radius: 3px;
-        box-shadow: 10px 10px 20px rgb(226, 226, 226);
-    }
-    .item img{
-        width: 100%;
-        transition: .6s all ease-in-out ;
-    }
-    .item img:hover{
-        transform: scale(1.2);
     }
     .back{
-        border-radius: 50%;
-        width: 20px;
+        width: 3vmin;
+        height: 3vmin;
+        border-radius: 3vmin;
         padding: 10px;
-        height: 20px;
-        background-color: #fafafa;
-        position: fixed;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 40px;
-        z-index: 99999;
-        box-shadow: 0px 0px 20px rgb(145, 145, 145);
+        margin: 5vmin;
+        position: fixed;
+        background-color: white;
+        box-shadow: 0px 0px 20px rgb(184, 184, 184);
+        z-index: 1;
     }
     .back_icon{
-        height: 20px;
-        width: 20px;
+        transform: scale(.7);
     }
-        
+    .header{
+        background-image: url(graphics/ui-2.jpeg);
+        background-size: cover;
+        width: 100vw;
+        height: 20vmin;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header:before{
+        width: 100vw;
+        height: 20vmin;
+        position: absolute; 
+        content:'';
+        background:  linear-gradient(black, rgb(7, 1, 59));
+        opacity: .7;
+        background-blend-mode: overlay;
+        transition: .4s ease-in;
+    }
+    .header p{
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        z-index: 2;
+        letter-spacing: 2px;
+    }
+    .header span{
+        letter-spacing: 0px;
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+    section{
+        width: 100vw;
+        height: 100vh;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    @media screen and (max-width: 700px) {
+        section{
+            flex-direction: column;
+            height: 100vh;
+        }
+    }
+    .text_div{
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 30px;
+        padding-left: 5vmin;
+        height: 100%;
+        width: 40%;
+        min-width: 400px;
+    }
+    @media screen and (max-width: 700px) {
+        .text_div{
+            padding-block: 20px;
+            height: fit-content;
+        }
+    }
+    .text_div span{
+        font-size: 2.3em;
+    }
+    .text_div button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(91, 0, 175);
+        border: none;
+        border-radius: 13px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        width: 200px;
+    }
+    .text_div svg{
+        fill: white;
+        height: 20px;
+        transform: rotate(180deg) ;
+        margin-left: 10px;
+    }
+    .image_div{
+        display: flex;
+        justify-content: center;
+        height: 80%;
+        width: 60%;
+        min-width: 400px;
+    }
+    @media screen and (max-width: 700px) {
+        .image_div{
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+    .image_div img{
+        height: 100%;
+        box-shadow: 0px 20px 26px rgb(202, 202, 202);
+    }
+    @media screen and (max-width: 700px){
+        .image_div img{
+            width: 100%;
+            height: auto;
+            margin-top: 30px;
+        }
+    }
+    section:last-of-type{
+        background-color: rgb(248, 248, 248);
+        font-family: 'Slish';
+        color: #1e1e1e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        background-color: white;
+        width: 80%;
+        height: 50%;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgb(235, 235, 235);
+        padding-block: 20px;
+        padding-inline: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media screen and (max-width: 700px){
+        .container{
+            flex-direction: column;
+            height: fit-content;
+        }
+    }
+    .flyer{
+        background-color: green;
+        height: 30vh;
+        aspect-ratio: var(--ratio);
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+   
+    .flyer:last-of-type{
+        margin-right: 0px;
+    }
+    @media screen and (max-width: 700px){
+        .flyer{
+            margin-bottom: 10px;
+            width: 80%;
+            height: 30vh;
+        }
+        .flyer:last-of-type{
+            margin-right: 10px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -218,94 +198,55 @@
         </div>
     </a>
 
-    <div class="section">
-       
-            <p class="name">
-                <span class="one">McVinci</span>
-                <br>
-                The Graphic Designer
-            </p>
-            
-            <br>
-
-            <div class="misfit">
-                <img src="graphics/Stationeries.jpg">
-
-                <p class="spaced">Brand Identity Design for <br>
-                    <span class="name-1">Billion Shades Ads</span>
-            
-                    <br>
-                    <br>
-                    
-                    <span class="talk">Brand Goal: Growing Start-ups and other upcoming brands by providing<br>
-                    branding materials and services ranging from Brand Identity Design to <br>
-                    ad materials and consultancy.</span>
-
-                    <br>
-                    <br>
-                        <button class="button">
-                            See Full Project
-                        </button>
-                </p>
-            </div>
+    <div class="header">
+        <p><span>McVinci</span><br> As a Graphic Designer</p>
     </div>
 
-    <section class="second">
-        
-        <img src="graphics/digitalart.png">
-
-        <p class="every_text">
-            Logo Design for<br>
-            <span class="brand_name">Derah Vee</span>
-
+    <section>
+        <div class="text_div">
+            <p>Brand Identity Design for
+            <br>
+            <span>Billion Shades Ads</span>
             <br>
             <br>
-
-           <span class="explain">Logo Design Project for a nighties
-            sale brand. Lorem ipsum, dolor sit amet <br>consectetur adipisicing elit. Eveniet perspiciatis, repudiandae  at <br>amet temporibus?</span>
-
-            <br>
-            <br>
-               
-            <button class="button-2">
-                See Full Project
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, ea adipisci sed eos eaque xercitationem eligendi aut neque qui velit similique deleniti id maxime, voluptas nemo officiis nam rem.
+            </p>
+            <button>
+                <p>View Full Project</p>
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
             </button>
-        </p>
-        
-    </section>
-    <div class="line"></div>
-
-    <section class="flyers">
-        <P>Flyer Design Gallery</P>
-
-        <div class="flyer-pics">
-            <!--so here, I can add boxes of different aspect ratios and make thumbnails with that aspect ratio-->
-            <div class="item" style="--ratio: 2 / 1 "><img src="graphics/"></div>
-            <div class="item" style="--ratio: 5 / 2"><img src="graphics/SQUARE FLYER MOCKUP.jpg"></div>
-            <div class="item" style="--ratio: 4.5 / 3.5">
-                <div><img src="graphics/rorw.jpg"></div>
-                <div><Img src="graphics/rorw.jpg"></div>
-            </div>
-            <div class="item" style="--ratio: 2 / .5"><img src="graphics/SQUARE FLYER MOCKUP-2.jpg"></div>
-            <div class="item" style="--ratio: 4.5 / 3 ">
-                <div><img src="graphics/skillznet.jpg"></div>
-                <div><img src="graphics/skillznet.jpg"></div>
-            </div>
-            <div class="item" style="--ratio: 4.5 / 2"><img src="graphics/CAMPAIGN POSTER.png"></div>
         </div>
+        <div class="image_div">
+            <img src="graphics/gdp/Stationeries.jpg">
+        </div>
+    </section>
 
-        <div class="flyer-pics">
-            <!--so here, I can add boxes of different aspect ratios and make thumbnails with that aspect ratio-->
-            <div class="item" style="--ratio: 2.6 / .6"><img src="graphics/bg.png"></div>
-            <div class="item" style="--ratio: 4.5 / 2"><img src="graphics/bells.png"></div>
-            <div class="item" style="--ratio: 4.5 / 3 ">
-                <div><img src="graphics/1k (1).jpg"></div>
-                <div><img src="graphics/1k (1).jpg"></div>
-            </div>
-            <div class="item" style="--ratio: 5 / 2"><img src="graphics/nativity.jpg"></div>
-            <div class="item" style="--ratio: 2 / 1 "><img src="graphics/bg.png"></div>
-            <div class="item" style="--ratio: 4.5 / 3.5"><img src="graphics/"></div>
-            
+    <section>
+        <div class="image_div">
+            <img src="graphics/gdp/DerahVee.png">
+        </div>
+        <div class="text_div">
+            <p>Brand Identity Design for
+            <br>
+            <span>Eleven Fifty-five MV Solutions</span>
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, ea adipisci sed eos eaque xercitationem eligendi aut neque qui velit similique deleniti id maxime, voluptas nemo officiis nam rem.
+            </p>
+            <button>
+                <p>View Full Project</p>
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Flyer Designs</h2>
+        <div class="container">
+            <div class="flyer" style="--ratio: 1.7 / 1 "></div>
+            <div class="flyer" style="--ratio: 1 / 1 "></div>
+            <div class="flyer" style="--ratio: 1.5 / 1 "></div>
+            <div class="flyer" style="--ratio: .8 / 1 "></div>
         </div>
     </section>
     
