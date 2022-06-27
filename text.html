@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <head>
+        <title>Wahala</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            button{
+                height: 60px;
+                width: 200px
+            }
+            .container{
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 1;
+            }
+            .container.active{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .swiper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                height: 90%;
+                background: transparent;
+            }
+            .swiper-slide{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .swiper-slide img{
+                height: 100%;
+                width: auto;
+            }
+            .swiper-button-prev, .swiper-button-next{
+                transform: scale(.7);
+                color: white;
+            }
+            .swiper-pagination-bullet-active{
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+
+        <button class="BSA_button" id="BSA_button"></button>
+          <!-- Slider main container -->
+    <div class="container" id="container">
+        <div class="swiper">
+           
+            <div class="swiper-wrapper">
+               
+                <div class="swiper-slide"><img src="graphics/gdp/Stationeries.jpg"></div>
+                <div class="swiper-slide"><img src="graphics/gdp/Stationeries.jpg"></div>
+                <div class="swiper-slide"><img src="graphics/gdp/Stationeries.jpg"></div>
+                ...
+            </div>
+        
+            <div class="swiper-pagination"></div>
+        
+           
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+
+        </script>
+        <script>
+            const container = document.getElementById('container');
+            const button = document.getElementById('BSA_button');
+
+            button.addEventListener('click', () => {
+                container.classList.add('active');
+            });
+            container.addEventListener('click', () => {
+                container.classList.remove('active');
+            });
+        </script>
+    </body>
+</html>
