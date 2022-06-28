@@ -10,8 +10,8 @@
 
     <style>
     @font-face {
-    font-family: "Slish";
-    src: url(graphics/Fragille-Reguler.ttf) format("truetype");
+        font-family: "Slish";
+        src: url(graphics/Fragille-Reguler.ttf) format("truetype");
     }
     body{
         margin: 0px;
@@ -29,7 +29,7 @@
         position: fixed;
         background-color: white;
         box-shadow: 0px 0px 20px rgb(184, 184, 184);
-        z-index: ;
+        z-index:1 ;
     }
     .back_icon{
         transform: scale(.7);
@@ -152,7 +152,7 @@
         justify-content: center;
         align-items: center;
     }
-    .container{
+    .flyer-container{
         background-color: white;
         width: 80%;
         height: 50%;
@@ -165,7 +165,7 @@
         justify-content: center;
     }
     @media screen and (max-width: 700px){
-        .container{
+        .flyer-container{
             flex-direction: column;
             height: fit-content;
         }
@@ -191,56 +191,60 @@
         }
     }
     .container{
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                display: none;
-                background-color: rgba(0, 0, 0, 0.8);
-                z-index: 1;
-            }
-            .container.active{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .swiper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 80%;
-                height: 90%;
-                background: transparent;
-                margin-bottom: 50px;
-            }
-            .swiper-slide{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .swiper-slide img{
-                height: 100%;
-                width: auto;
-                border-radius: 8px;
-            }
-            .swiper-button-prev, .swiper-button-next{
-                transform: scale(.7);
-                color: white;
-                z-index: 14;
-            }
-            .swiper-pagination-bullet-active{
-                background-color: rgb(109, 0, 82);
-            }
-            #closemodal{
-                height: 25px;
-                width: auto;
-                fill: rgb(231, 231, 231);
-                position: relative;
-                left: 90vw;
-                top: -47vh;
-                z-index: 20;
-            }
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+    .container.active{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 90%;
+        background: transparent;
+        margin-bottom: 50px;
+    }
+    .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img{
+        height: 100%;
+        width: auto;
+        border-radius: 8px;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        transform: scale(.7);
+        color: white;
+        z-index: 14;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: rgb(109, 0, 82);
+    }
+    #closemodal{
+        height: 25px;
+        width: auto;
+        fill: rgb(231, 231, 231);
+        position: relative;
+        left: 90vw;
+        top: -47vh;
+        z-index: 20;
+        cursor: pointer;
+    }
+    #closemodal:hover{
+        fill: rgb(194, 194, 194);
+    }
     </style>
 </head>
 <body>
@@ -251,8 +255,6 @@
         </div>
     </a>
 
-  
-    
     <div class="container" id="container">
         <svg xmlns="http://www.w3.org/2000/svg" id="closemodal" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
     
@@ -274,10 +276,10 @@
         </div>
     </div>
     
-
     <div class="header">
         <p><span>McVinci</span><br> As a Graphic Designer</p>
     </div>
+
 
     <section>
         <div class="text_div">
@@ -298,6 +300,7 @@
         </div>
     </section>
 
+    
     <section>
         <div class="image_div">
             <img src="graphics/gdp/DerahVee.png">
@@ -319,7 +322,7 @@
 
     <section>
         <h2>Flyer Designs</h2>
-        <div class="container">
+        <div class="flyer-container">
             <div class="flyer" style="--ratio: 1.7 / 1 "></div>
             <div class="flyer" style="--ratio: 1 / 1 "></div>
             <div class="flyer" style="--ratio: 1.5 / 1 "></div>
