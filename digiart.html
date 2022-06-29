@@ -57,70 +57,100 @@
             height: 20px;
             width: 20px;
         }
-        .wrapper{
-            height: 60vh;
-            min-height: 330px;
-            width: 80vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        section:last-of-type{
+        background-color: rgb(248, 248, 248);
+        height: fit-content;
+        font-family: 'Slish';
+        font-size: 1.3em;
+        color: #1e1e1e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         }
-        .frame{
-            aspect-ratio: var(--ratio);
-            margin-right: 15px;
-            height: 75%;
+        .flyer-container{
             background-color: white;
-            background-position: center;
-            background-size: cover;
-            box-shadow: 0px 7px 7px  rgba(0,0,0, 10%);
-            border-radius: 0px;
-            overflow: hidden;
+            width: 80%;
+            height: fit-content;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgb(235, 235, 235);
+            padding-block: 20px;
+            padding-inline: 15px;
             display: flex;
-            position: relative;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+        @media screen and (max-width: 700px){
+            .flyer-container{
+                flex-direction: column;
+            }
+        }
+        .rows{
+            width: 32.5%;
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        @media screen and (max-width: 700px) {
+            .rows{
+                width: 100%;
+            }
+        }
+        .picture{
+            width: 100%;
+            margin-bottom: 10px;
+            height: fit-content;
+            border-radius: 10px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            transition: all .3s ease-in-out;
+            transition: ease-in-out .4s  ;
         }
-        .frame:hover{
-            transform: scale(1.2);
-            box-shadow: 0px 10px 15px  rgba(0,0,0, 20%);
-            background-color: transparent;
-            z-index: 1;
+        .picture:hover{
+            transform: scale(1.03);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
         }
-        .frame img{
-            position: absolute;
-            height: 133%;
-            transition: all .3s ease-in-out;
+        .picture img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
-        .frame img:hover{
-            transform: scale(.8);
-            transition: all .3s ease-in-out;
+        .picture img:hover{
+            border: .6px solid rgb(236, 236, 236);
         }
     </style>
 </head>
 <body>
     <div class="wholebody">
-        <h3>The McVinci Art Gallery</h3>
-
         <a href="index.html#digi_art">
             <div class="back">
                 <img src="graphics/back-caret.svg" class="back_icon">
             </div>
         </a>
 
-        <div class="wrapper">
-            <div class="frame" style="--ratio: 2 / 1 "><img src="graphics/digital_art/khaleesi.jpg"></div>
-            <div class="frame" style="--ratio: 5 / 2"><img src="graphics/digital_art/Eyes.png"></div>
-            <div class="frame"  style="--ratio: 2 / .6"><img src="graphics/digital_art/scene sketch.png"></div>
-            <div class="frame" style="--ratio: 2.6 / .5"><img src="graphics/digital_art/AbiBless Mockup 1.jpg"></div>
-        </div>
-
-        <div class="wrapper">
-            <div class="frame"  style="--ratio: 1.1 / .5"  ><img src="graphics/digital_art/perspective.JPG"></div>
-            <div class="frame"  style="--ratio: 1 / .5"><img src="graphics/digital_art/Digital Traditional Painting.png"></div>
-            <div class="frame" style="--ratio: 2 / 1 "><img src="graphics/digital_art/Lips.png"></div>
-            <div class="frame"  style="--ratio: 4.8/ 2"><img src="graphics/digital_art/Beautiful Mind 2.png"></div>
-        </div>
+        <section>
+            <h2>The McVinci Art Gallery</h2>
+            <div class="flyer-container">
+                <div class="rows">
+                    <div class="picture"><img src="graphics/digital_art/Beautiful Mind 2.png"></div>
+                    <div class="picture"><img src="graphics/digital_art/Lips.png"></div>
+                    <div class="picture"><img src="graphics/digital_art/perspective.JPG"></div>
+                </div>
+    
+                <div class="rows">
+                    <div class="picture"><img src="graphics/digital_art/khaleesi.jpg"></div>
+                    <div class="picture"><img src="graphics/digital_art/Digital Traditional Painting.png"></div>
+                    <div class="picture"><img src="graphics/digital_art/AbiBless-1.jpg"></div>
+                </div>
+    
+                <div class="rows">
+                    <div class="picture"><img src="graphics/digital_art/digitalart.jpg"></div>
+                    <div class="picture"><img src="graphics/digital_art/scene sketch.png"></div>
+                    <div class="picture"><img src="graphics/digital_art/Eyes.png"></div>
+                </div>
+            </div>
+        </section>    
     </div>
 </body>
 </html>
