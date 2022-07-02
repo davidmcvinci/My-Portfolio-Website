@@ -9,7 +9,12 @@
     font-family: "Slish";
     src: url(graphics/Fragille-Reguler.ttf) format("truetype");
 }
-
+@media screen and (max-width: 700px) {
+    *{
+        font-size: 3.4vmin;
+        text-align: center;
+    } 
+}
 html{
     scroll-behavior: smooth;
     
@@ -17,6 +22,12 @@ html{
 body{
     display: flex;
     background-color: rgb(29, 38, 41);
+}
+@media screen and (max-width: 700px) {
+    body{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .loader{
     width: 100vw;
@@ -52,11 +63,30 @@ a{
     transition: 0.3s ease-in-out;  
     background-color: transparent;
 }
+@media screen and (max-width: 700px) {
+    .nav{
+        flex-direction: row;
+        z-index: 3;
+        border-bottom: 1px solid white;
+        margin: 0;
+        min-height: 7vh;
+        max-height: 10vh;
+        width: 100%;
+        float: flex-start;
+        border-radius: 0px;
+    }
+}
 ul{
+    display: flex;
     background-color: transparent;
 	align-items: center;
 	justify-content: space-around;
 	list-style-type: none;
+}
+@media screen and (max-width: 700px) {
+    ul{
+        
+    }
 }
 .nav svg{
     fill: #fafafa;
@@ -137,16 +167,30 @@ ul{
     background-color: transparent;
     position: absolute;
 }
+@media screen and (max-width: 700px) {
+    .intro{
+        justify-content: center;
+        align-items: center;
+    }
+}
 .intro h3{
     background-color: transparent;
     border: none !important;
     font-family: "Slish";
     font-weight: reguler;
-    font-size: 5rem;
+    font-size: 5em;
     color:#fff;
     transition: .5s;
     animation: scroll 1.4s;
 }
+@media screen and (max-width: 700px) {
+  .intro h3{
+    text-align: center;
+    font-size: 4.7em;
+    line-height: 80px;
+  }  
+}
+
 .intro h3:hover{
     color: #d6e0ee;
     border: none !important;
@@ -157,6 +201,12 @@ ul{
     font-family: "Montserrat";
     font-weight: regular;
     font-size: 1em; 
+}
+@media screen and (min-width: 700px) {
+    .intro .skills{
+        margin-top: 20px;
+        text-align: center;
+    }  
 }
 .gdp{
     width: 98vw;
@@ -216,6 +266,12 @@ ul{
     background-position: center;
     background-size: cover;
 }
+@media screen and (max-width: 700px) {
+    .ui{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 .ui::before{
     width: 98vw;
     height: 100vh;
@@ -252,13 +308,11 @@ li{
 .ui img{
     z-index:3 ;
     float: left;
-    height: 370px;
+    width: 42%;
+    height: auto;
     background-color: transparent;
-}
-.ui img{
-    margin-left: 100px;
+    margin-left: 80px;
     transform: scale(1.4);
-    /*height: 1000px;*/
 }
 .digital_art{
     width: 98vw;
