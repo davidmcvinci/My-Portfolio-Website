@@ -68,7 +68,6 @@ a{
         height: 30vh;
         flex-direction: row;
         z-index: 99999;
-        background-color: yellow;
     }
 }
 ul{
