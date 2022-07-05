@@ -2,22 +2,14 @@
     background-color: #2e2e2e;
     padding: 0px;
     margin: 0px;
-    color: rgb(212, 212, 212);
-    
+    color: rgb(212, 212, 212);    
 }
 @font-face {
     font-family: "Slish";
     src: url(graphics/Fragille-Reguler.ttf) format("truetype");
 }
-@media screen and (max-width: 700px) {
-    *{
-        font-size: 3.4vmin;
-        text-align: center;
-    } 
-}
 html{
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth; 
 }
 body{
     display: flex;
@@ -27,6 +19,7 @@ body{
     body{
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 }
 .loader{
@@ -48,6 +41,12 @@ a{
     overflow: hidden;
     margin-left: 50px;
 }
+@media screen and (max-width: 700px) {
+    .all{
+        width: 100%;
+        margin-inline: 0px;     
+    }
+}
 .nav{
     margin-top: calc((100vh - 45vh) / 2);
     margin-left: 10px;
@@ -59,34 +58,24 @@ a{
     width: 35px;
     padding-left: 5px;
     justify-content: space-around;
-    border-radius: 45px  ;
+    border-radius: 45px;
     transition: 0.3s ease-in-out;  
     background-color: transparent;
 }
 @media screen and (max-width: 700px) {
     .nav{
+        width: 100vw;
+        height: 30vh;
         flex-direction: row;
-        z-index: 3;
-        border-bottom: 1px solid white;
-        margin: 0;
-        min-height: 7vh;
-        max-height: 10vh;
-        width: 100%;
-        float: flex-start;
-        border-radius: 0px;
+        z-index: 99999;
+        background-color: yellow;
     }
 }
 ul{
-    display: flex;
     background-color: transparent;
 	align-items: center;
 	justify-content: space-around;
 	list-style-type: none;
-}
-@media screen and (max-width: 700px) {
-    ul{
-        
-    }
 }
 .nav svg{
     fill: #fafafa;
@@ -167,30 +156,24 @@ ul{
     background-color: transparent;
     position: absolute;
 }
-@media screen and (max-width: 700px) {
-    .intro{
-        justify-content: center;
-        align-items: center;
-    }
-}
 .intro h3{
     background-color: transparent;
     border: none !important;
     font-family: "Slish";
     font-weight: reguler;
-    font-size: 5em;
+    font-size: 5rem;
     color:#fff;
     transition: .5s;
     animation: scroll 1.4s;
 }
 @media screen and (max-width: 700px) {
-  .intro h3{
-    text-align: center;
-    font-size: 4.7em;
-    line-height: 80px;
-  }  
+    .intro h3{
+        text-align: center;
+        font-size: 5em;
+        line-height: 1em;
+        margin-bottom: 10px;
+    }
 }
-
 .intro h3:hover{
     color: #d6e0ee;
     border: none !important;
@@ -202,11 +185,11 @@ ul{
     font-weight: regular;
     font-size: 1em; 
 }
-@media screen and (min-width: 700px) {
-    .intro .skills{
-        margin-top: 20px;
-        text-align: center;
-    }  
+@media screen and (max-width: 700px) {
+ .intro .skills{
+    font-size: .97em;
+    text-align: center;
+ }   
 }
 .gdp{
     width: 98vw;
@@ -220,7 +203,11 @@ ul{
     position: relative;
     scroll-snap-type: y mandatory;
     /*overflow-y: scroll;*/
-
+}
+@media screen and (max-width: 700px) {
+    .gdp{
+        overflow: hidden;
+    }   
 }
 .gdp::before{
     width: 98vw;
@@ -231,7 +218,6 @@ ul{
     background:rgb(255, 255, 255);
     background-blend-mode: multiply;
 }
-
 .gdp p{
     scroll-snap-align: start;
     position: absolute;
@@ -270,6 +256,7 @@ ul{
     .ui{
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 }
 .ui::before{
@@ -289,12 +276,20 @@ li{
    background-color: transparent;
 }
 .ui p{
-    position: absolute;
-    left: 60%;
+    float: inline-end;
+    margin-left: 150px;
     font-size: 1em;
     font-family: 'Poppins', sans-serif;
     color: white;
     background-color: transparent;
+}
+@media screen and (max-width: 700px) {
+    .ui p{
+        font-size: 1em;
+        margin: 0px;
+        position: relative;
+        top: 20px;
+    }   
 }
 .ui span:first-of-type{
     background-color: transparent;
@@ -308,12 +303,17 @@ li{
 .ui img{
     z-index:3 ;
     float: left;
-    width: 42%;
-    height: auto;
-    background-color: transparent;
-    margin-left: 80px;
+    height: 370px;
+    background-color: transparent; margin-left: 100px;
     transform: scale(1.4);
 }
+@media screen and (max-width: 700px) {
+    .ui img{
+       width: 90%;
+       height: auto;
+    }
+}
+
 .digital_art{
     width: 98vw;
     height: 99vh;
@@ -322,13 +322,18 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 0px;
     box-sizing: border-box;
     background-image: url(graphics/artbg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-} 
+}
+@media screen and (max-width: 700px) {
+    .digital_art{
+        height: 100vh;
+        text-align: center;
+    }   
+}
 .digital_art::before{
     width: 98vw;
     height: 99vh;
@@ -353,8 +358,12 @@ li{
     color:rgb(255, 255, 255);
     animation: scroll 1.4s;
     z-index: inherit;
-    margin-left: 80px;
-    
+}
+@media screen and (max-width: 700px) {
+    .digital_art h3{
+        font-size: 4.5em;
+        left: 60px;
+    }
 }
 .digital_art span{
     text-align: center;
@@ -381,6 +390,12 @@ li{
     z-index: inherit;
     transition: .3s;
 }
+@media screen and (max-width: 700px) {
+    .digital_art button{
+      top: 100px;
+      left: -35%;
+    }
+}
 .digital_art button:hover{
     background-color: transparent;
     border: 2px solid rgb(231, 231, 231);
@@ -397,10 +412,34 @@ li{
     align-items: center;
     justify-content: center;
 }
+@media screen and (max-width: 700px) {
+    .ratings{
+        height: fit-content;
+        padding-block: 30px;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+    }
+}
+.rating-box{
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 700px) {
+    .rating-box{
+        flex-direction: column;
+    }
+}
 .ratings h3{
     font-family: "Slish" ;
     font-size: 2.4em;
     margin-bottom: 40px;
+}
+@media screen and (max-width: 700px) {
+    .ratings h3{
+        text-align: center;
+        font-size: 2em;
+    }   
 }
 .a_rating{
     height: 100%;
@@ -416,7 +455,17 @@ li{
     border-radius: 0px 0px 8px 8px;
     box-shadow: 0px 15px 25px rgb(240, 240, 240);
     border-top: 1px solid #cacaca;
-    overflow: hidden;
+    
+}
+@media screen and (max-width: 700px) {
+    .a_rating{
+        height: fit-content;
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .a_rating:last-of-type{
+        margin-bottom: 10px;
+    }  
 }
 .picture:first-of-type{
     background-image: url(graphics/my_portrait.jpg);
@@ -430,6 +479,12 @@ li{
     color: white;
     font-weight: bold;
     font-size: 14px;
+}
+@media screen and (max-width: 700px) {
+    .rate_me{
+        width: fit-content;
+        padding-inline: 30px;
+    }   
 }
 .modal_container{
     width: 100vw;
@@ -640,15 +695,16 @@ li{
 }
 
 
-
-
-
-
 .reveal{
     position: relative;
     transform: translateY(200px);
     opacity: 0;
     transition: all 1s ease-in-out;
+}
+@media screen and (max-width: 700px) {
+    .reveal{
+        transform: translateY(100px);
+    }   
 }
 .reveal.active{
     transform: translateY(0px);
