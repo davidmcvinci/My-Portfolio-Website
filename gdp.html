@@ -9,266 +9,269 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
     <style>
-    @font-face {
-        font-family: "Slish";
-        src: url(graphics/Fragille-Reguler.ttf) format("truetype");
-    }
-    body{
-        margin: 0px;
-        padding: 0px;
-    }
-    .back{
-        width: 3vmin;
-        height: 3vmin;
-        border-radius: 3vmin;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 5vmin;
-        position: fixed;
-        background-color: white;
-        box-shadow: 0px 0px 20px rgb(184, 184, 184);
-        z-index:1 ;
-    }
-    .back_icon{
-        transform: scale(.7);
-    }
-    .header{
-        background-image: url(graphics/ui-2.jpeg);
-        background-size: cover;
-        width: 100vw;
-        height: 20vmin;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: -992;
-    }
-    .header:before{
-        width: 100vw;
-        height: 20vmin;
-        position: absolute; 
-        content:'';
-        background:  linear-gradient(black, rgb(7, 1, 59));
-        opacity: .7;
-        background-blend-mode: overlay;
-        transition: .4s ease-in;
-    }
-    .header p{
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-        color: white;
-        z-index: 2;
-        letter-spacing: 2px;
-    }
-    .header span{
-        letter-spacing: 0px;
-        font-size: 1.6em;
-        font-weight: 600;
-    }
-    section{
-        width: 100vw;
-        height: 100vh;
-        padding-top: 30px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    @media screen and (max-width: 700px) {
+        @font-face {
+            font-family: "Slish";
+            src: url(graphics/Fragille-Reguler.ttf) format("truetype");
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .back{
+            width: 3vmin;
+            height: 3vmin;
+            border-radius: 3vmin;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5vmin;
+            position: fixed;
+            background-color: white;
+            box-shadow: 0px 0px 20px rgb(184, 184, 184);
+            z-index:1 ;
+        }
+        .back_icon{
+            transform: scale(.7);
+        }
+        .header{
+            background-image: url(graphics/ui-2.jpeg);
+            background-size: cover;
+            width: 100vw;
+            height: 20vmin;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -992;
+        }
+        .header:before{
+            width: 100vw;
+            height: 20vmin;
+            position: absolute; 
+            content:'';
+            background:  linear-gradient(black, rgb(7, 1, 59));
+            opacity: .7;
+            background-blend-mode: overlay;
+            transition: .4s ease-in;
+        }
+        .header p{
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            z-index: 2;
+            letter-spacing: 2px;
+        }
+        .header span{
+            letter-spacing: 0px;
+            font-size: 1.6em;
+            font-weight: 600;
+        }
         section{
-            flex-direction: column;
-            height: 100vh;
-        }
-    }
-    .text_div{
-        font-family: 'Poppins', sans-serif;
-        font-size: 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-right: 30px;
-        padding-left: 5vmin;
-        height: 100%;
-        width: 40%;
-        min-width: 400px;
-    }
-    @media screen and (max-width: 700px) {
-        .text_div{
-            padding-block: 20px;
-            height: fit-content;
-        }
-    }
-    .text_div span{
-        font-size: 2.3em;
-    }
-    .text_div button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(91, 0, 175);
-        border: none;
-        border-radius: 13px;
-        color: white;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        width: 200px;
-        cursor: pointer;
-    }
-    .text_div svg{
-        fill: white;
-        height: 20px;
-        transform: rotate(180deg) ;
-        margin-left: 10px;
-    }
-    .image_div{
-        display: flex;
-        justify-content: center;
-        height: 80%;
-        width: 60%;
-        min-width: 400px;
-    }
-    @media screen and (max-width: 700px) {
-        .image_div{
             width: 100vw;
             height: 100vh;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
-    }
-    .image_div img{
-        height: 100%;
-        box-shadow: 0px 20px 26px rgb(202, 202, 202);
-    }
-    @media screen and (max-width: 700px){
+        @media screen and (max-width: 700px) {
+            section{
+                flex-direction: column;
+                height: 100vh;
+                margin-bottom: 200px;
+            }
+        }
+        .text_div{
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 30px;
+            padding-left: 5vmin;
+            height: 100%;
+            width: 40%;
+            min-width: 400px;
+        }
+        @media screen and (max-width: 700px) {
+            .text_div{
+                padding-block: 20px;
+                height: fit-content;
+            }
+        }
+        .text_div span{
+            font-size: 2.3em;
+        }
+        .text_div button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(91, 0, 175);
+            border: none;
+            border-radius: 13px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            width: 200px;
+            cursor: pointer;
+        }
+        .text_div svg{
+            fill: white;
+            height: 20px;
+            transform: rotate(180deg) ;
+            margin-left: 10px;
+        }
+        .image_div{
+            display: flex;
+            justify-content: center;
+            height: 80%;
+            width: 60%;
+            min-width: 400px;
+        }
+        @media screen and (max-width: 700px) {
+            .image_div{
+                width: 100vw;
+                height: 100vh;
+            }
+        }
         .image_div img{
-            width: 100%;
-            height: auto;
-            margin-top: 30px;
+            height: 100%;
+            transition: all .4s ease-in;
+            box-shadow: 0px 20px 26px rgb(202, 202, 202);
         }
-    }
-    section:last-of-type{
-        background-color: rgb(248, 248, 248);
-        height: fit-content;
-        font-family: 'Slish';
-        font-size: 1.6em;
-        color: #1e1e1e;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .flyer-container{
-        background-color: white;
-        width: 80%;
-        height: fit-content;
-        border-radius: 10px;
-        box-shadow: 0px 10px 20px rgb(235, 235, 235);
-        padding-block: 20px;
-        padding-inline: 15px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-around;
-    }
-    @media screen and (max-width: 700px){
+        img:hover{
+            transform: scale(1.02);
+        }
+        @media screen and (max-width: 700px){
+            .image_div img{
+                width: 100%;
+                height: auto;
+                margin-top: 30px;
+            }
+        }
+        section:last-of-type{
+            background-color: rgb(248, 248, 248);
+            height: fit-content;
+            font-family: 'Slish';
+            font-size: 1.6em;
+            color: #1e1e1e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         .flyer-container{
+            background-color: white;
+            width: 80%;
+            height: fit-content;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgb(235, 235, 235);
+            padding-block: 20px;
+            padding-inline: 15px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+        @media screen and (max-width: 700px){
+            .flyer-container{
+                flex-direction: column;
+            }
+        }
+        .rows{
+            width: 32.5%;
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
             flex-direction: column;
         }
-    }
-    .rows{
-        width: 32.5%;
-        height: 100%;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-    @media screen and (max-width: 700px) {
-        .rows{
-            width: 100%;
+        @media screen and (max-width: 700px) {
+            .rows{
+                width: 100%;
+            }
         }
-    }
-    .picture{
-        width: 100%;
-        margin-bottom: 10px;
-        height: fit-content;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: ease-in-out .4s  ;
-    }
-    .picture:hover{
-        transform: scale(1.03);
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
-    }
-    .picture img{
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-    .picture img:hover{
-        border: .6px solid rgb(236, 236, 236);
-    }
-    .container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        display: none;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 1;
-    }
-    .container.active{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .swiper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 90%;
-        background: transparent;
-        margin-bottom: 50px;
-    }
-    .swiper-slide{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .swiper-slide img{
-        height: 100%;
-        width: auto;
-        border-radius: 8px;
-    }
-    .swiper-button-prev, .swiper-button-next{
-        transform: scale(.7);
-        color: white;
-        z-index: 14;
-    }
-    .swiper-pagination-bullet-active{
-        background-color: rgb(109, 0, 82);
-    }
-    #closemodal, #secondClosemodal{
-        height: 25px;
-        width: auto;
-        fill: rgb(231, 231, 231);
-        position: relative;
-        left: 90vw;
-        top: -47vh;
-        z-index: 20;
-        cursor: pointer;
-    }
-    #closemodal:hover, #secondClosemodal:hover{
-        fill: rgb(194, 194, 194);
-    }
-    
+        .picture{
+            width: 100%;
+            margin-bottom: 10px;
+            height: fit-content;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: ease-in-out .4s  ;
+        }
+        .picture:hover{
+            transform: scale(1.03);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        .picture img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .picture img:hover{
+            border: .6px solid rgb(236, 236, 236);
+        }
+        .container{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+        .container.active{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 90%;
+            background: transparent;
+            margin-bottom: 50px;
+        }
+        .swiper-slide{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiper-slide img{
+            height: 100%;
+            width: auto;
+            border-radius: 8px;
+        }
+        .swiper-button-prev, .swiper-button-next{
+            transform: scale(.7);
+            color: white;
+            z-index: 14;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: rgb(109, 0, 82);
+        }
+        #closemodal, #secondClosemodal{
+            height: 25px;
+            width: auto;
+            fill: rgb(231, 231, 231);
+            position: relative;
+            left: 90vw;
+            top: -47vh;
+            z-index: 20;
+            cursor: pointer;
+        }
+        #closemodal:hover, #secondClosemodal:hover{
+            fill: rgb(194, 194, 194);
+        }
     </style>
 </head>
 <body>
-
     <a href="index.html#gdp">
         <div class="back">
-            <img src="graphics/back-caret.svg" class="back_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="back_icon" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
         </div>
     </a>
 
@@ -298,7 +301,6 @@
         <p><span>McVinci</span><br> As a Graphic Designer</p>
     </div>
 
-
     <section>
         <div class="text_div">
             <p>Brand Identity Design for
@@ -306,7 +308,7 @@
             <span>Billion Shades Ads</span>
             <br>
             <br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, ea adipisci sed eos eaque xercitationem eligendi aut neque qui velit similique deleniti id maxime, voluptas nemo officiis nam rem.
+           Billion Shades Ads is a marketing and advertisement brand whose purpose is to help start-ups and small businesses reach optimum market bouyancy. I was able to adhere to their brand values of simplicity, quality and variety to create a well-suiting identity for their brand.
             </p>
             <button id="BSA_button">
                 <p>View Full Project</p>
@@ -318,17 +320,17 @@
         </div>
     </section>
 
-    <!-- Lightbox for Eleven Fifty-five -->
+    <!-- Lightbox for Derah Vee -->
     <div class="container" id="secondContainer">
         <svg xmlns="http://www.w3.org/2000/svg" id="secondClosemodal" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
     
         <div class="swiper">
            
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="graphics/gdp/ROSE AND JOSEPH.png"></div>
-                <div class="swiper-slide"><img src="graphics/gdp/DerahVee.png"></div>
-                <div class="swiper-slide"><img src="graphics/gdp/SQUARE FLYER MOCKUP-2.jpg"></div>
-                <div class="swiper-slide"><img src="graphics/gdp/SQUARE FLYER MOCKUP.jpg"></div>
+                <div class="swiper-slide"><img src="graphics/gdp/Derah Vee 3.png"></div>
+                <div class="swiper-slide"><img src="graphics/gdp/Derah Vee Shopping Bag Mockup 2.jpg"></div>
+                <div class="swiper-slide"><img src="graphics/gdp/Derah Vee Cover Photo.png"></div>
+                <div class="swiper-slide"><img src="graphics/gdp/Derah Vee 4.png"></div>
                 
             </div>
         
@@ -347,24 +349,64 @@
         <div class="text_div">
             <p>Brand Identity Design for
             <br>
-            <span>Eleven Fifty-five MV Solutions</span>
+            <span>Derah Vee</span>
             <br>
             <br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus, ea adipisci sed eos eaque xercitationem eligendi aut neque qui velit similique deleniti id maxime, voluptas nemo officiis nam rem.
+            A Female clothing brand that engages in the sale of Nighties and pyjamas. This brand is associated with luxury and quality- things I took into consideration while picking this brand`s colors, typeface and logomark.
             </p>
-            <button id="secondButton">
+            <button id="secondbutton">
                 <p>View Full Project</p>
                 <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
             </button>
         </div>
     </section>
 
+
+    <!-- Lightbox for Bells -->
+    <div class="container" id="ThirdContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" id="ThirdClosemodal" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+    
+        <div class="swiper">
+           
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="graphics/gdp/bells-insta-mockups.jpg"></div>
+                <div class="swiper-slide"><img src="graphics/gdp/Bucket Mockup.jpg"></div>
+                
+            </div>
+        
+            <div class="swiper-pagination"></div>
+        
+           
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
     <section>
-        <h2>Flyer/ Poster Designs</h2>
+        <div class="text_div">
+            <p>Brand Identity Design for
+            <br>
+            <span>Bells Interior and Paints</span>
+            <br>
+            <br>
+            Bells Paints and Interior is a decoration and consultation based brand with a colorful personna and quality output. An inviting and not-so-formal approach was necessary to portray this brand`s intentions properly and I was able to achieve that in the brand identity design. 
+            </p>
+            <button id="Bell_btn">
+                <p>View Full Project</p>
+                <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
+            </button>
+        </div>
+        <div class="image_div">
+            <img src="graphics/gdp/Bells-cover.jpg">
+        </div>
+    </section>
+
+    <section>
+        <h2>Other Creative Works</h2>
         <div class="flyer-container">
             <div class="rows">
                 <div class="picture"><img src="graphics/gdp/CLSAN Fresher`s Week Flyer.jpg"></div>
-                <div class="picture"><img src="graphics/gdp/ROSE AND JOSEPH.png"></div>
+                <div class="picture"><img src="graphics/gdp/SKILLZNET EMPOWERMENT SUMMIT ALT.jpg"></div>
                 <div class="picture"><img src="graphics/gdp/Design is a silent part of your brand.png"></div>
             </div>
 
@@ -421,13 +463,23 @@
         });
 
         const secondContainer = document.getElementById('secondContainer');
-            const secondButton = document.getElementById('secondButton');
+            const secondButton = document.getElementById('secondbutton');
             const secondClosemodal = document.getElementById('secondClosemodal')
             secondButton.addEventListener('click', () => {
                 secondContainer.classList.add('active');
             });
             secondClosemodal.addEventListener('click', () => {
                 secondContainer.classList.remove('active');
+        });
+
+        const ThirdContainer = document.getElementById('ThirdContainer');
+            const Bellbutton = document.getElementById('Bell_btn');
+            const ThirdClosemodal = document.getElementById('ThirdClosemodal')
+            Bellbutton.addEventListener('click', () => {
+                ThirdContainer.classList.add('active');
+            });
+            ThirdClosemodal.addEventListener('click', () => {
+                ThirdContainer.classList.remove('active');
         });
     </script>
 </body>

@@ -26,7 +26,7 @@ body{
     width: 100vw;
     height: 100vh;
     z-index: 902930494;
-    background-color: #1e1e1e;
+    background-color: yellow;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -68,7 +68,6 @@ a{
         height: 30vh;
         flex-direction: row;
         z-index: 99999;
-        background-color: yellow;
     }
 }
 ul{
@@ -112,6 +111,9 @@ ul{
 .title{
     top: 188px;
 }
+.title-3{
+    top: 38vh;
+}
 .title-4{
     top: 300px;
 }
@@ -140,11 +142,11 @@ ul{
     background-position: center;
     background-size: cover;
     width: 98vw;
-    height: 99vh;
+    height: 100vh;
 }
 .everythingelse::before{
     width: 98vw;
-    height: 99vh;
+    height: 100vh;
     position: absolute; 
     content:'';
     background:  linear-gradient(#000000, #1e1e1e);
@@ -192,8 +194,8 @@ ul{
  }   
 }
 .gdp{
-    width: 98vw;
-    height:99vh;
+    width: 100vw;
+    height:100vh;
     background-image: url(graphics/texture.jpg);
     background-position: center;
     padding: 0px;
@@ -210,8 +212,8 @@ ul{
     }   
 }
 .gdp::before{
-    width: 98vw;
-    height:99vh;
+    width: 100vw;
+    height:100vh;
     opacity: .9;
     position: absolute; 
     content:'';
@@ -294,7 +296,7 @@ li{
 .ui span:first-of-type{
     background-color: transparent;
     position: absolute;
-    font-size: 4.5rem;
+    font-size: 4.5em;
     font-family: "Slish";
     color: #fff;
     z-index: 1;
@@ -313,10 +315,9 @@ li{
        height: auto;
     }
 }
-
 .digital_art{
-    width: 98vw;
-    height: 99vh;
+    width: 100vw;
+    height: 100vh;
     z-index: 10;
     position: relative;
     display: flex;
@@ -335,8 +336,8 @@ li{
     }   
 }
 .digital_art::before{
-    width: 98vw;
-    height: 99vh;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: auto; 
     left: auto;
@@ -403,7 +404,7 @@ li{
     outline: none;
 }
 .ratings{
-    width: 98vw;
+    width: 100vw;
     height: 100vh;
     background-color: white;
     display: flex;
@@ -422,7 +423,7 @@ li{
     }
 }
 .rating-box{
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 @media screen and (max-width: 700px) {
@@ -673,8 +674,8 @@ li{
 .contact p{
     z-index: 100000;
     color: white;
-    font-family: poppins;
-    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.5px;
     font-size: 35px;
     font-weight: 600;
     background-color: transparent;
@@ -687,8 +688,14 @@ li{
      align-items: center;
      margin-top: 50px;
  }
-.links img{
-    background: transparent;
+ .links ul{
+	align-items: center;
+    display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+ } 
+.links svg{
+    fill: #d3dbd9;
     width: 20px;
     height: 20px;
     margin-right: 20px;
@@ -714,7 +721,7 @@ li{
 
 
 
-/*@keyframes scroll {
+/* @keyframes scroll {
     from{
         opacity: 0;
         transform: translateY(-20px);
@@ -723,4 +730,4 @@ li{
         opacity: 1;
         transform: translateY(0px);
     }    
-}
+} */
