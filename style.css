@@ -140,11 +140,11 @@ ul{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 98vw;
+    width: 100vw;
     height: 100vh;
 }
 .everythingelse::before{
-    width: 98vw;
+    width: 100vw;
     height: 100vh;
     position: absolute; 
     content:'';
@@ -153,9 +153,15 @@ ul{
     background-blend-mode: multiply;
     transition: .4s ease-in;
 }
+
 .intro{
     background-color: transparent;
     position: absolute;
+}
+@media screen and (max-width: 700px) {
+    .intro{
+        padding-inline: 300px;
+    }
 }
 .intro h3{
     background-color: transparent;
@@ -203,11 +209,11 @@ ul{
     justify-content: center;
     position: relative;
     scroll-snap-type: y mandatory;
-    /*overflow-y: scroll;*/
 }
 @media screen and (max-width: 700px) {
     .gdp{
         overflow: hidden;
+        padding-inline: 20px;
     }   
 }
 .gdp::before{
@@ -218,6 +224,11 @@ ul{
     content:'';
     background:rgb(255, 255, 255);
     background-blend-mode: multiply;
+}
+@media screen and (max-width: 700px) {
+    .gdp::before{
+        padding-inline: 300px;
+    }
 }
 .gdp p{
     scroll-snap-align: start;
@@ -258,6 +269,7 @@ ul{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-inline: 20px;
     }
 }
 .ui::before{
@@ -310,8 +322,9 @@ li{
 }
 @media screen and (max-width: 700px) {
     .ui img{
-       width: 90%;
+       width: 86%;
        height: auto;
+       margin-right: 130px;
     }
 }
 .digital_art{
@@ -332,6 +345,7 @@ li{
     .digital_art{
         height: 100vh;
         text-align: center;
+        padding-inline: 30px;
     }   
 }
 .digital_art::before{
@@ -361,8 +375,9 @@ li{
 }
 @media screen and (max-width: 700px) {
     .digital_art h3{
-        font-size: 4.5em;
+        font-size: 4em;
         left: 60px;
+        margin-block: 300px;
     }
 }
 .digital_art span{
@@ -415,10 +430,10 @@ li{
 @media screen and (max-width: 700px) {
     .ratings{
         height: fit-content;
-        padding-block: 30px;
+        padding-block: 80px;
         align-items: center;
         justify-content: center;
-        padding-left: 20px;
+        padding-left: 15px;
     }
 }
 .rating-box{
@@ -521,6 +536,11 @@ li{
     padding-block: 25px;
     padding-inline: 15px;
 }
+@media screen and (max-width: 700px) {
+    .modal{
+        padding-inline: 70px;
+    }
+}
 .modal form{
     display: flex;
     height: 100%;
@@ -535,11 +555,21 @@ li{
     color:rgb(29, 38, 41);
     margin-bottom: 0px;
 }
+@media screen and (max-width: 700px) {
+    .modal h2{
+       text-align: center;
+    }
+}
 .modal label{
     margin: 10px;
     background-color: transparent;
     color: #1e1e1e;
     font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width: 700px) {
+    .modal label{
+       text-align: center;
+    }
 }
 .modal input{
     width: 120%;
@@ -626,13 +656,19 @@ li{
     height: fit-content;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-block: 20px;
     background-color: white;
 }
 .foricons .instagram{
+    height: 30px;
     margin-right: 20px;
     fill: rgb(184, 184, 184);
     background-color: transparent;
+}
+.foricons .twitter, .facebook{
+    height: 25px;
+    margin-right: 20px;
+    fill: rgb(184, 184, 184);
 }
 .foricons :last-child{
     margin-right: 0px;
